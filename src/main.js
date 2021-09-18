@@ -10,7 +10,9 @@ import VueScreenSize from 'vue-screen-size';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './index.css';
 
-const socketConnection = SocketIO('https://elegant-rosalind-e1526a.netlify.app');
+const socketConnection = SocketIO('https://elegant-rosalind-e1526a.netlify.app', {
+    withCredentials: true,
+});
 Vue.use(new VueSocketIO({
     debug: true,
     connection: socketConnection
